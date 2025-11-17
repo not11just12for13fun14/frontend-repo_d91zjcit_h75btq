@@ -1,26 +1,19 @@
-import { useState } from 'react'
+import Header from './components/Header';
+import CollageBuilder from './components/CollageBuilder';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 text-gray-900">
+      <Header />
+      <main className="max-w-6xl mx-auto px-4 py-8">
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold">Make a collage in your browser</h2>
+          <p className="text-gray-600 mt-1">Drop photos, pick a layout, tweak spacing and background, then export a high-quality PNG.</p>
         </div>
-      </div>
+        <CollageBuilder />
+      </main>
+      <Footer />
     </div>
   )
 }
